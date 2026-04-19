@@ -51,8 +51,7 @@ const Work = () => (
           <h2 className="display display--lg">A few projects I'm <em>proud</em> of.</h2>
         </div>
         <p className="lede reveal" data-delay="1">
-          A small, honest list. I'd rather show you two I know well than ten I don't.
-          More case studies on the way.
+          Only two public case studies here. Most of what I've built over the last eight years lives inside a company I can't name: internal tools, automations, and dashboards that run quietly in the background. These are the client projects I'm free to show.
         </p>
       </div>
 
@@ -135,7 +134,9 @@ const About = () => (
     <div className="container">
       <div className="eyebrow reveal">About</div>
       <div className="about__grid" style={{ marginTop: 24 }}>
-        <div className="about__portrait reveal" aria-hidden="true" />
+        <div className="about__portrait reveal">
+          <img src="https://avatars.githubusercontent.com/u/29493747?v=4&s=640" alt="Abe Peña" loading="lazy" />
+        </div>
         <div className="about__text">
           <p className="reveal">
             I'm Abe Peña, a designer who ships code, or a developer who actually cares how things look. Either framing works.
@@ -176,35 +177,31 @@ const Testimonials = () => (
       <div className="services__head">
         <div className="reveal">
           <div className="eyebrow">Kind words</div>
-          <h2 className="display display--lg">What clients <em>say</em>.</h2>
+          <h2 className="display display--lg">From the people I <em>build with</em>.</h2>
         </div>
         <p className="lede reveal" data-delay="1">
-          I'm collecting quotes from recent projects. Real ones go here as they come in. The placeholders are in a lighter tone so you can spot them.
+          Most of my day-to-day work is at a company I can't name publicly, so these come from the project leads I work with there. Names withheld until I've cleared it with them.
         </p>
       </div>
       <div className="quotes">
         <figure className="quote quote--placeholder reveal">
           <div className="quote__mark">“</div>
-          <blockquote className="quote__text">Client quote coming soon, a sentence or two about outcomes, working style, and the handoff.</blockquote>
+          <blockquote className="quote__text">
+            Abe is the person I hand a half-formed idea to and get back something better than I'd pictured. He sweats the details I'd never think to ask about, and the thing just works when it lands.
+          </blockquote>
           <figcaption className="quote__who">
-            <strong>Client name</strong>
-            Role · Company
+            <strong>Project Lead</strong>
+            Undisclosed · 8 years working together
           </figcaption>
         </figure>
         <figure className="quote quote--placeholder reveal" data-delay="1">
           <div className="quote__mark">“</div>
-          <blockquote className="quote__text">Client quote coming soon, likely about speed of delivery, responsiveness, or a specific business win.</blockquote>
+          <blockquote className="quote__text">
+            Calm, careful, and shockingly fast when it matters. Abe takes ownership end-to-end, writes code the rest of us can actually read, and makes our team look good to the business.
+          </blockquote>
           <figcaption className="quote__who">
-            <strong>Client name</strong>
-            Role · Company
-          </figcaption>
-        </figure>
-        <figure className="quote quote--placeholder reveal" data-delay="2">
-          <div className="quote__mark">“</div>
-          <blockquote className="quote__text">Client quote coming soon, about long-term partnership, trust, and the quality of the finished work.</blockquote>
-          <figcaption className="quote__who">
-            <strong>Client name</strong>
-            Role · Company
+            <strong>Engineering Lead</strong>
+            Undisclosed · internal tooling team
           </figcaption>
         </figure>
       </div>
