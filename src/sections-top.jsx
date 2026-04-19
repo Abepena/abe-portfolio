@@ -15,6 +15,21 @@ const Nav = () => {
     };
   }, [open]);
 
+  const scrollToAnchor = (hash) => {
+    const target = document.querySelector(hash);
+    if (!target) return;
+    const navH = document.querySelector('.nav')?.offsetHeight || 72;
+    const y = target.getBoundingClientRect().top + window.scrollY - navH - 12;
+    window.scrollTo({ top: Math.max(y, 0), behavior: 'smooth' });
+    history.replaceState(null, '', hash);
+  };
+
+  const handleMobileNav = (e, hash) => {
+    e.preventDefault();
+    setOpen(false);
+    requestAnimationFrame(() => scrollToAnchor(hash));
+  };
+
   return (
     <header className="nav" data-scrolled={scrolled} data-open={open}>
       <div className="container nav__inner">
@@ -45,11 +60,11 @@ const Nav = () => {
         </div>
       </div>
       <div id="nav-mobile" className="nav__mobile" data-open={open} aria-hidden={!open}>
-        <a href="#services" onClick={close}>Services</a>
-        <a href="#before-after" onClick={close}>Before / After</a>
-        <a href="#work" onClick={close}>Work</a>
-        <a href="#process" onClick={close}>Process</a>
-        <a href="#about" onClick={close}>About</a>
+        <a href="#services" onClick={(e) => handleMobileNav(e, '#services')}>Services</a>
+        <a href="#before-after" onClick={(e) => handleMobileNav(e, '#before-after')}>Before / After</a>
+        <a href="#work" onClick={(e) => handleMobileNav(e, '#work')}>Work</a>
+        <a href="#process" onClick={(e) => handleMobileNav(e, '#process')}>Process</a>
+        <a href="#about" onClick={(e) => handleMobileNav(e, '#about')}>About</a>
       </div>
     </header>
   );
