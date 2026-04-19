@@ -130,6 +130,7 @@ body {
   padding: 0 clamp(20px, 4vw, 48px);
 }
 .container--narrow { max-width: 920px; }
+.container--wide { max-width: 1520px; }
 
 section { padding: var(--section-py) 0; }
 

@@ -173,7 +173,7 @@ const About = () => (
 // ---------- Testimonials (placeholder) ----------
 const Testimonials = () => (
   <section>
-    <div className="container">
+    <div className="container container--wide">
       <div className="services__head">
         <div className="reveal">
           <div className="eyebrow">Kind words</div>
