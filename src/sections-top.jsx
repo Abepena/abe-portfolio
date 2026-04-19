@@ -71,8 +71,8 @@ const Hero = ({ variant }) => {
             <p className="stat__lbl">Scope I cover</p>
           </div>
           <div>
-            <p className="stat__num">4 to 6 wks</p>
-            <p className="stat__lbl">Typical time to launch</p>
+            <p className="stat__num">Fixed price</p>
+            <p className="stat__lbl">No surprise invoices</p>
           </div>
         </div>
       </div>
