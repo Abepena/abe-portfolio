@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Abe Peña · OG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f100e;
+    --fg: #f1ede3;
+    --fg-2: #cfc8b7;
+    --accent: oklch(72% 0.10 160);
+    --rule: rgba(241, 237, 227, 0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+  }
+  body {
+    background: radial-gradient(ellipse at 30% 30%, #15181a 0%, var(--bg) 70%);
+    color: var(--fg);
+    font-family: "Fraunces", serif;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 80px;
+    position: relative;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 148px;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    color: var(--fg);
+  }
+  .tagline {
+    margin-top: 28px;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--fg-2);
+    max-width: 900px;
+  }
+  .accent-word { color: var(--accent); font-style: italic; }
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(241, 237, 227, 0.5);
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+  <div class="top"><span class="dot"></span>Abe Peña</div>
+
+  <div class="main">
+    <div class="eyebrow">Designer / Developer</div>
+    <h1>Abe Peña</h1>
+    <p class="tagline">Bringing your <span class="accent-word">ideas</span> to life, from a single landing page to the full stack behind it.</p>
+  </div>
+
+</body>
+</html>
