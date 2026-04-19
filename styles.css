@@ -425,6 +425,16 @@ section { padding: var(--section-py) 0; }
 }
 .hero__stats > div:first-child { text-align: left; }
 .hero__stats > div:last-child { text-align: right; }
+
+@media (max-width: 720px) {
+  .hero__stats {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    text-align: center;
+  }
+  .hero__stats > div { text-align: center !important; }
+  .hero__stats .stat__num { font-size: 26px; }
+}
 .hero__stats .stat__num {
   font-family: var(--font-display);
   font-size: clamp(32px, 3.6vw, 48px);
