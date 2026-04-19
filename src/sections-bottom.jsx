@@ -179,9 +179,6 @@ const Testimonials = () => (
           <div className="eyebrow">Kind words</div>
           <h2 className="display display--lg">From the people I <em>build with</em>.</h2>
         </div>
-        <p className="lede reveal" data-delay="1">
-          Two from the NJ Stars Elite team, and one from a project lead at the company where most of my day-to-day work lives. Names withheld until I've cleared permission to share.
-        </p>
       </div>
       <div className="quotes">
         <figure className="quote reveal">
