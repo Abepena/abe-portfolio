@@ -17,4 +17,4 @@ Open http://localhost:8765/Portfolio.html
 ## Content notes
 - Before site: njstarseliteaau.com
 - After site: njstarselite.com
-- LEAG: theleag.app
+- LEAG: leag.app

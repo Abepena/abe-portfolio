@@ -18,7 +18,7 @@ const workItems = [
     title: 'LEAG',
     tag: 'Landing page',
     year: '2025',
-    url: 'https://theleag.app',
+    url: 'https://leag.app',
     body: 'Marketing landing page for a new product. Clear positioning, careful type, and a performance budget that leaves no room for slow first paints.',
     points: [
       { k: 'Scope', v: 'Single page' },
