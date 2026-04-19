@@ -2,21 +2,54 @@
 
 const Nav = () => {
   const scrolled = useScrolled();
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+    document.body.style.overflow = open ? 'hidden' : '';
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
-    <header className="nav" data-scrolled={scrolled}>
+    <header className="nav" data-scrolled={scrolled} data-open={open}>
       <div className="container nav__inner">
-        <a href="#top" className="nav__brand">
+        <a href="#top" className="nav__brand" onClick={close}>
           <span className="dot" />
           Abe Peña
         </a>
-        <nav className="nav__links">
-          <a href="#services">Services</a>
-          <a href="#before-after">Before / After</a>
-          <a href="#work">Work</a>
-          <a href="#process">Process</a>
-          <a href="#about">About</a>
-          <a href="#contact" className="nav__cta">Get in touch</a>
+        <nav className="nav__links" data-open={open}>
+          <a href="#services" onClick={close}>Services</a>
+          <a href="#before-after" onClick={close}>Before / After</a>
+          <a href="#work" onClick={close}>Work</a>
+          <a href="#process" onClick={close}>Process</a>
+          <a href="#about" onClick={close}>About</a>
         </nav>
+        <div className="nav__actions">
+          <a href="#contact" className="nav__cta" onClick={close}>Get in touch</a>
+          <button
+            type="button"
+            className="nav__toggle"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="nav-mobile"
+            data-open={open}
+            onClick={() => setOpen(o => !o)}
+          >
+            <span /><span /><span />
+          </button>
+        </div>
+      </div>
+      <div id="nav-mobile" className="nav__mobile" data-open={open} aria-hidden={!open}>
+        <a href="#services" onClick={close}>Services</a>
+        <a href="#before-after" onClick={close}>Before / After</a>
+        <a href="#work" onClick={close}>Work</a>
+        <a href="#process" onClick={close}>Process</a>
+        <a href="#about" onClick={close}>About</a>
       </div>
     </header>
   );
