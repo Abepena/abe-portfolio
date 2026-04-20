@@ -654,7 +654,10 @@ section { padding: var(--section-py) 0; }
   background: rgba(15,15,14,0.78);
   color: #faf7f1;
   backdrop-filter: blur(6px);
+  transition: opacity .2s ease, transform .2s ease;
+  pointer-events: none;
 }
+.ba-slider__label[data-hidden="true"] { opacity: 0; transform: translateY(-4px); }
 .ba-slider__label--before { left: 16px; }
 .ba-slider__label--after  { right: 16px; background: var(--accent); color: var(--accent-ink); }
 

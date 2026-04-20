@@ -82,8 +82,8 @@ const BASlider = () => {
       >
         <div className="ba-slider__img"><MockAfter /></div>
       </div>
-      <div className="ba-slider__label ba-slider__label--before">Before · 2025</div>
-      <div className="ba-slider__label ba-slider__label--after">After · 2026</div>
+      <div className="ba-slider__label ba-slider__label--before" data-hidden={pos < 50}>Before · 2025</div>
+      <div className="ba-slider__label ba-slider__label--after" data-hidden={pos > 50}>After · 2026</div>
       <div className="ba-slider__handle" style={{ left: `${pos}%` }}>
         <div className="ba-slider__knob" aria-hidden="true">
           <SliderIcon />
